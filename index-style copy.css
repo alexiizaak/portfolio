@@ -1,0 +1,290 @@
+@font-face {
+        font-family: "Fraunces";
+        src: url("Resources/Fonts/fraunces_120pt-light.woff2") format("woff2");
+        font-weight: 100;
+    }
+@font-face {
+        font-family: "Avenir";
+        src: url("Resources/Fonts/avenir-lt-w01_35-light1475496.woff2") format("woff2");
+        font-weight: 100;
+    }
+    
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    color: grey;
+    font-family: "Avenir", serif;
+    }
+
+header {
+    align-items: center;
+
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: min(40px, 100%);
+    
+    padding: 5vh 0vw 5vh 0vw;
+    margin: 0 auto;
+   
+    z-index: 100;
+    
+    transition: opacity 0.2s linear;
+    }
+
+
+    #index-header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20vw;
+    }
+.index-site-title {
+    padding: 12.5vh, 40vw, 12.5vh, 40vw;
+    position: absolute;
+    font-family: "Fraunces", serif;
+    font-weight: 80;
+    font-size: 3vw;
+    display: contents;
+    text-align: center;
+
+    }   
+        .index-site-title:hover {
+            color: black;
+            }  
+            a, .site-title {
+                transition: color 0.3s ease;
+                }
+
+.index-nav-left, .index-nav-right {
+    display: contents;
+    gap: 20vw;
+    transition: opacity 0.4s ease;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    }
+
+    .dropdown {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #940025;
+        height: 5vh;
+        width: 3vw;
+        z-index: 1;
+        padding: 1.5vh 1vw;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+        font-family: "Avenir", serif;
+                font-optical-sizing: auto;
+                font-weight: 100;
+                font-style: normal;
+                font-size: 12px;  
+                color: white;  
+            margin: 0vh 0vw;
+            width: fit-content;
+            translate: -40px
+    }
+
+    .dropdown:hover ul.dropdown-content {
+        display: grid;
+        transition: ease-in;
+    }
+
+    .dropdown-item{
+    padding: 3px 6px;
+    cursor: pointer;
+    }
+
+    .dropdown-item::after {              
+                    content: "";
+                    position:absolute;
+                    left: 0;
+                    bottom: -5px;
+                    right: 0;
+                    width: 0%;
+                    background: white;
+                    transition: width 0.5s ease;
+                }
+                    
+                        a, .dropdown-item {
+                            transition: color 0.3s ease;
+                        }
+                        .dropdown-item:hover::after {
+                            width: 100%;
+                            height: 1px;
+                            
+                        }  
+
+    
+
+
+    #Web-Banner{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+        z-index: 1;
+        }
+            video{
+                display: block;
+            }
+
+        .hero {
+            margin-top: 15vh;
+            width: 100%;
+            height: 70vh;
+            max-height: 550px;
+            overflow: hidden;
+            position: relative;
+            }                                      
+            
+            
+            .hero::after{                                            
+            /* SETTINGS TO DARKEN THE VIDEO, Formats Weird and gets in the way of the header
+            content property stops the video being able to play entirely because its placing an invisible layer over the video*/
+                content: "";
+                position: relative;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.25); 
+                z-index: 2;
+                pointer-events: none;
+                margin-top: 2vh;
+                }                                 
+
+.social {
+    margin: 0 1vw;
+    padding: 0px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    color: #940025;
+    
+    
+}
+.social:hover {
+    color: black;
+}
+a, .social {
+    transition: color 0.3s ease;
+}
+
+.contact-footer {
+    top: 35vh
+}
+
+.selected-page {
+    color: #940025;
+    }
+        .button {
+            position: relative;
+                font-family: "Avenir", serif;
+                font-optical-sizing: auto;
+                font-weight: 100;
+                font-style: normal;
+                font-size: 10px; 
+                text-align: inherit;   
+            transition: color 0.3s ease;
+            margin: 0vh 0vw;
+            width: fit-content;
+            height: 100%;
+            }
+            
+                .button::after {              
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    right: 0;
+                    width: 0%;
+                    background: black;
+                    transition: width 0.5s ease;
+                }
+                    
+                        a, button {
+                            transition: color 0.3s ease;
+                        }
+                        .button:hover::after {
+                            width: 100%;
+                            height: 1px;
+                            
+                        }                    
+            .initials {
+                    font-family: "Fraunces", serif;
+                    font-optical-sizing: auto;
+                    font-weight: 100;
+                    font-style: normal;
+                    font-size: 1.2vw;
+                    margin-top: 30px;
+                    color: #940025;
+                    text-align: center;
+                    }
+            .links {
+                color: #940025;
+                opacity: 0.7;
+                padding: 0vh 0vw 0vh 0vw; 
+            }
+
+            
+      
+footer {
+    height: auto;
+    list-style: none;
+    text-align: center;
+    padding: 5vh 0vw 5vh 0vw;
+    text-decoration: none; 
+    list-style: none;
+}
+.created-by {
+    font-family: "Fraunces", serif;
+                    font-optical-sizing: auto;
+                    font-weight: 100;
+                    font-style: normal;
+                    font-size: 0.5vw;
+                    margin-top: 30px;
+                    color: #940025;
+                    text-align: center;
+                    margin: 2px;
+}
+
+        /* Scroll reveal states: hidden by default, animate once visible */
+        .fade-in-fast,
+        .fade-in-slow,
+        .fade-in-slowest {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .fade-in-fast.is-visible {
+            animation: fadeIn 1.5s ease forwards;
+        }
+        .fade-in-slow.is-visible {
+            animation: fadeIn 3.5s ease forwards;
+        }
+        .fade-in-slowest.is-visible {
+            animation: fadeIn 5.5s ease forwards;
+        } 
+       
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);}
+                to {
+                    opacity: 1;
+                    transform: translateY(0);}
+                }
+
+section {
+    width: 100%;
+    }
