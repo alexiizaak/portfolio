@@ -176,22 +176,22 @@ header {
     .album-grid {
         padding: 15vh 0vw 0vh 0vw;
         display: grid;
-        grid: auto / auto;
-        justify-content: left;
+        grid: auto / auto auto;
+        justify-content:left;
         gap: 5vh 5vw;
 
 }
 
     .album-art {
-        object-fit: cover;
-        max-inline-size: 600px 600px;
+        position: relative;
+        max-inline-size: 300px 300px;
         height: auto;
         width: auto;
         filter: brightness(1);
         }
         .album-art:hover {  
             filter: brightness(0.5);
-            transition: filter 0.5s ease;
+            transition: filter 1s ease;
         }
          
         
@@ -199,32 +199,30 @@ header {
         font-family: "Avenir", serif;
         font-weight: 100;
         font-style: normal;
-        font-size: 2vw;
+        font-size: 1vw;
         text-align: center;
-        overflow-wrap: break-word;
         color: white;
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
-        filter:brightness(2)
+        z-index: 2;
     }
 
     .album-credits {
         font-family: "Avenir", serif;
         font-weight: 70;
         font-style: normal;
-        font-size: 1vw;
+        font-size: 0.5vw;
         text-align: center;
-        overflow-wrap: break-word;
         color: white;
         position: absolute;
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
-        filter: brightness(2);
+        z-index: 2;
     }
 
     .album-art:hover .album-title,
@@ -233,6 +231,10 @@ header {
         filter:brightness(2);
         transition: opacity 2s ease;
     }
+            .album-art::after .album-title,
+            .album-art::after .album-credits {
+                filter:brightness(2);
+            }
             
                 
     .bandcamp-embed{
