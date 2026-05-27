@@ -80,12 +80,12 @@ header {
             transition: opacity 0.2s linear;
         }
 
-    #bio-title {
+    #black-title {
         font-family: "Fraunces", serif;
         font-optical-sizing: auto;
         font-weight: 100;
         font-style: normal;
-        font-size: 5vw;
+        font-size: 100px;
         color: black;
                     
             position: fixed;
@@ -106,12 +106,12 @@ header {
 
     #bio-text {
         font-family: "Avenir", serif;
-        font-optical-sizing: auto;
+        font-optical-sizing: none;
         font-weight: 100;
         font-style: normal;
-        font-size: 0.75vw;
+        font-size: clamp(10px, 0.75vw, 10px);
         line-height: 3vh;
-        word-spacing: 0.2vw;
+        word-spacing: 0.55vw;
         text-align: justify;
         padding: 20vh 0vw 0vh 0vw;
         }   
@@ -134,7 +134,7 @@ header {
   font-family: "Avenir", serif;
         font-weight: 70;
         font-style: normal;
-        font-size: 1vw;
+        font-size: clamp(10px, 1vw, 10px);
         overflow-wrap: break-word;
         color: white;
         position: absolute;
@@ -155,7 +155,7 @@ header {
   font-family: "Avenir", serif;
         font-weight: 70;
         font-style: normal;
-        font-size: 1vw;
+        font-size: clamp(10px, 1vw, 10px);
         overflow-wrap: break-word;
         color: white;
         position: absolute;
@@ -199,7 +199,7 @@ header {
         font-family: "Avenir", serif;
         font-weight: 100;
         font-style: normal;
-        font-size: 1vw;
+        font-size: clamp(10px, 1vw, 10px);
         text-align: center;
         color: white;
         position: absolute;
@@ -214,7 +214,7 @@ header {
         font-family: "Avenir", serif;
         font-weight: 70;
         font-style: normal;
-        font-size: 0.5vw;
+        font-size: clamp(10px, 0.5vw, 10px);
         text-align: center;
         color: white;
         position: absolute;
@@ -252,7 +252,7 @@ header {
         .upcoming-dates {
             text-align: right;
             font-family: "Avenir", serif;
-            font-size: 0.7vw;
+            font-size: clamp(10px, 0.75vw, 10px);
             word-spacing: 0.3vw;
             color: inherit;
             }
@@ -274,7 +274,7 @@ header {
         .year {
             text-align: center;
             font-family: "Fraunces", serif;
-            font-size: 1vw;
+            font-size: clamp(10px, 1vw, 10px);
             font-style: bold;
             color: #940025;
             }
@@ -282,7 +282,7 @@ header {
         .previous-dates {
             text-align: left;
             font-family: "Avenir", serif;
-            font-size: 0.75vw;
+            font-size: clamp(10px, 0.75vw, 10px);
             word-spacing: 0.3vw;
             }
 
