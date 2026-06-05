@@ -257,11 +257,11 @@ header {
             color: inherit;
             }
 
-            .upcoming-dates:hover {
+            /* .upcoming-dates:hover {
                 color: #940025;
                 transition: 0.3s ease;
                 cursor: pointer;
-            }
+            } */
 
 
         .previous-title {
@@ -274,7 +274,7 @@ header {
         .year {
             text-align: center;
             font-family: "Fraunces", serif;
-            font-size: clamp(10px, 1vw, 10px);
+            font-size: clamp(15px, 1vw, 15px);
             font-style: bold;
             color: #940025;
             }
