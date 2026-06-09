@@ -248,8 +248,8 @@ a, .social {
                     font-optical-sizing: auto;
                     font-weight: 100;
                     font-style: normal;
-                    font-size: 1.2vw;
-                    margin-top: 30px;
+                    font-size: 1.1vw;
+                    margin-top: 3vh;
                     color: #940025;
                     text-align: center;
                     }
@@ -265,7 +265,7 @@ footer {
     height: auto;
     list-style: none;
     text-align: center;
-    padding: 5vh 0vw 5vh 0vw;
+    padding: 20vh 0vw 5vh 0vw;
     text-decoration: none; 
     list-style: none;
 }
@@ -274,8 +274,8 @@ footer {
                     font-optical-sizing: auto;
                     font-weight: 100;
                     font-style: normal;
-                    font-size: 0.5vw;
-                    margin-top: 30px;
+                    font-size: 1.1vw;
+                    margin-top: 1.1vh;
                     color: #940025;
                     text-align: center;
                     margin: 2px;                    
