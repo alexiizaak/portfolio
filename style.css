@@ -386,7 +386,7 @@ footer {
                     font-optical-sizing: auto;
                     font-weight: 100;
                     font-style: normal;
-                    font-size: clamp(0.5vw, 10px, 1vw);
+                    font-size: 1.1vw;
                     color: #940025;
                     text-align: center;
                     margin: 2px;
