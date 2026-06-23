@@ -1,1 +1,1 @@
-web address - https://alexiizaak.github.io/portfolio/
+web address - https://alexizaakmilling.com
