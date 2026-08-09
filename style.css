@@ -1,43 +1,5 @@
-@font-face {
-        font-family: "Fraunces";
-        src: url("Resources/Fonts/fraunces_120pt-light.woff2") format("woff2");
-        font-weight: 100;
-    }
-@font-face {
-        font-family: "Avenir";
-        src: url("Resources/Fonts/avenir-lt-w01_35-light1475496.woff2") format("woff2");
-        font-weight: 100;
-    }
-    
-a{
-    text-decoration: none;
-    color: inherit;
-}
 
-body {
-    margin: 0;
-    background-color: #f9f2e5;
-    color: grey;
-    font-family: "Avenir", serif;
-    }
-
-header {
-    align-items: center;
-
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: min(40px, 100%);
-    
-    padding: 5vh 0vw 5vh 0vw;
-    margin: 0 auto;
-   
-    z-index: 100;
-    
-    transition: opacity 0.2s linear;
-    }
-            
-    #bio {
+        #bio {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
@@ -124,52 +86,36 @@ header {
         max-width: 80%;        
         }
 #projects {
-    gap: 10px 10px 10px 10px;
-    padding: 15vh 0vw 0vh 0vw;
-    margin: 0vh 50vw 0vh 0vw;
-    columns: 300px 2;
+    gap: 10px;
+    padding: 15vh 5vw 0vh 0vw;
+    margin: 0vh 5vw 0vh 45vw;
+    column-count: 2;
+    column-gap: 1vw;
 }
 
-.p-project-name {
+.project-item {
+    position: relative;
+    margin-bottom: 1vh;
+    }
+
+.project-name {
   font-family: "Avenir", serif;
         font-weight: 70;
         font-style: normal;
-        font-size: clamp(10px, 1vw, 10px);
-        overflow-wrap: break-word;
-        color: white;
+        font-size: clamp(10px, 1vw, 30px);
+        overflow-wrap: normal;
+        color: lightgray;
         position: absolute;
-        opacity: 0;
-        top: 150px;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        filter: brightness(2);
-    }
-
-    .album-art:hover .p-project-name {
-        opacity: 1;
-        filter:brightness(2);
-        transition: opacity 2s ease;
-    }
-
-    .l-project-name {
-  font-family: "Avenir", serif;
-        font-weight: 70;
-        font-style: normal;
-        font-size: clamp(10px, 1vw, 10px);
-        overflow-wrap: break-word;
-        color: white;
-        position: absolute;
         opacity: 0;
-        top: 100px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        filter: brightness(2);
+        z-index: 2;
+        transition: opacity 1s ease;
     }
 
-    .album-art:hover .l-project-name {
+    .album-art:hover .project-name {
         opacity: 1;
-        filter:brightness(2);
-        transition: opacity 2s ease;
     }
 
 
@@ -183,23 +129,37 @@ header {
 }
 
     .album-art {
+        display: block;
         position: relative;
-        max-inline-size: 300px 300px;
-        height: auto;
-        width: auto;
-        filter: brightness(1);
+        max-inline-size: 50vw;
+        overflow: hidden;
         }
-        .album-art:hover {  
-            filter: brightness(0.5);
-            transition: filter 1s ease;
-        }
+        .album-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.album-art:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.album-art:hover:after {
+    opacity: 1;}
          
         
     .album-title {
         font-family: "Avenir", serif;
         font-weight: 100;
         font-style: normal;
-        font-size: clamp(10px, 1vw, 10px);
+        font-size: clamp(10px, 1vw, 40px);
         text-align: center;
         color: white;
         position: absolute;
@@ -208,13 +168,14 @@ header {
         transform: translate(-50%, -50%);
         opacity: 0;
         z-index: 2;
+        transition: opacity 1s ease;
     }
 
     .album-credits {
         font-family: "Avenir", serif;
         font-weight: 70;
         font-style: normal;
-        font-size: clamp(10px, 0.5vw, 10px);
+        font-size: clamp(5px, 0.5vw, 10px);
         text-align: center;
         color: white;
         position: absolute;
@@ -223,19 +184,13 @@ header {
         transform: translate(-50%, -50%);
         opacity: 0;
         z-index: 2;
-    }
-
+        transition: opacity 2s ease;
+    } 
+    
     .album-art:hover .album-title,
     .album-art:hover .album-credits {
-        opacity: 1;
-        filter:brightness(2);
-        transition: opacity 2s ease;
+        opacity: 0.7;
     }
-            .album-art::after .album-title,
-            .album-art::after .album-credits {
-                filter:brightness(2);
-            }
-            
                 
     .bandcamp-embed{
         align-content: center;
@@ -247,6 +202,7 @@ header {
             text-align: right;
             font-family: "Fraunces", serif;
             font-size: 1.5vw;
+            font-weight: 80;
             }
 
         .upcoming-dates {
@@ -299,125 +255,4 @@ header {
                 padding: 35vh 5vw;
                 z-index: 2;
             }
-.social {
-    margin: 0 1vw;
-    padding: 0px;
-    font-size: 18px;
-    transition: color 0.3s ease;
-    color: #940025;
-    
-    
-}
-.social:hover {
-    color: black;
-}
-a, .social {
-    transition: color 0.3s ease;
-}
-
-.contact-footer {
-    top: 35vh
-}
-
-.selected-page {
-    color: #940025;
-    }
-        .button {
-            position: relative;
-                font-family: "Avenir", serif;
-                font-optical-sizing: auto;
-                font-weight: 100;
-                font-style: normal;
-                font-size: 10px; 
-                text-align: inherit;   
-            transition: color 0.3s ease;
-            margin: 0vh 0vw;
-            width: fit-content;
-            height: 100%;
-            }
-            
-                .button::after {              
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: -5px;
-                    right: 0;
-                    width: 0%;
-                    background: black;
-                    transition: width 0.5s ease;
-                }
-                    
-                        a, button {
-                            transition: color 0.3s ease;
-                        }
-                        .button:hover::after {
-                            width: 100%;
-                            height: 1px;
-                            
-                        }                    
-            .initials {
-                    font-family: "Fraunces", serif;
-                    font-optical-sizing: auto;
-                    font-weight: 100;
-                    font-style: normal;
-                    font-size: 1.1vw;
-                    margin-top: 1.1vh;
-                    color: #940025;
-                    text-align: center;
-                    }
-            .links {
-                color: #940025;
-                opacity: 0.7;
-                padding: 0vh 0vw 0vh 0vw; 
-            }
-
-            
-      
-footer {
-    height: auto;
-    list-style: none;
-    text-align: center;
-    padding: 5vh 0vw 5vh 0vw;
-    text-decoration: none; 
-    list-style: none;
-}
-.created-by {
-    font-family: "Fraunces", serif;
-                    font-optical-sizing: auto;
-                    font-weight: 100;
-                    font-style: normal;
-                    font-size: 0.8vw;
-                    color: #940025;
-                    text-align: center;
-                    margin: 2px;
-}
-
-        /* Scroll reveal states: hidden by default, animate once visible */
-        .fade-in-fast,
-        .fade-in-slow,
-        .fade-in-slowest {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-        .fade-in-fast.is-visible {
-            animation: fadeIn 1.5s ease forwards;
-        }
-        .fade-in-slow.is-visible {
-            animation: fadeIn 3.5s ease forwards;
-        }
-        .fade-in-slowest.is-visible {
-            animation: fadeIn 5.5s ease forwards;
-        } 
-       
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(10px);}
-                to {
-                    opacity: 1;
-                    transform: translateY(0);}
-                }
-
-section {
-    width: 100%;
-    }
+        
