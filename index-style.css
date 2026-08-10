@@ -4,12 +4,23 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 20vw;
-        font-size: clamp(0.7vw, 0.75vw, 1vw);
+        font-size: clamp(0.5rem, 0.75vw, 1rem);
 
     }
+
+    #mobile-header-content {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0vh 16vw;
+        font-size: clamp(1.5vw, 2vw, 3vw);
+        top: 11vh;
+        position: fixed;
+        z-index: 200;
+    }   
 .index-site-title {
     padding: 12.5vh 40vw 12.5vh 40vw;
-    position: absolute;
+    position: fixed;
     font-family: "Fraunces", serif;
     font-weight: 80;
     font-size: clamp(2rem, 3vw, 4rem);
@@ -31,6 +42,11 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    }
+
+    .mobile-header {
+    gap: clamp(3vw, 7vw, 10vw);
+    transition: opacity 0.4s ease;
     }
 
     .dropdown {
@@ -150,4 +166,22 @@
 
 section {
     width: 100%;
+    }
+
+    @media (max-width: 768px) 
+                    /* use (hover: none) when im not testing on my laptop */    {
+        .button:hover::after {
+        opacity: 0;
+        }
+            #mobile-header-content {
+                display: flex;
+            }
+
+            .index-nav-right {
+                display: none;
+            }
+            .index-nav-left {
+                display: none;
+            }
+
     }

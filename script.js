@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
 
     // --- Scroll-triggered fade-in for elements ---
-    const fadeEls = document.querySelectorAll(".fade-in-fast, .fade-in-slow, .fade-in-slowest");
+    const fadeEls = document.querySelectorAll(".fade-in-fastest, .fade-in-fast, .fade-in-slow, .fade-in-slowest");
 
     if (fadeEls.length) {
         const observer = new IntersectionObserver(
@@ -20,10 +20,29 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+const menuToggle = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("mobileNav");
+
+if (menuToggle && mobileNav) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = mobileNav.classList.toggle("open");
+        menuToggle.classList.toggle("open", isOpen);
+        menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    mobileNav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            mobileNav.classList.remove("open");
+            menuToggle.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+}
+
 
 // --- Fade the fixed header as the user scrolls down ---
 window.addEventListener("scroll", () => {
-    const header = document.querySelector("#index-header-content, #other-header-content");
+    const header = document.querySelector(".index-header-content, #other-header-content");
     if (!header) return;
 
     const fadeEnd = 60; // px after which the header is fully transparent
