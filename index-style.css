@@ -19,7 +19,7 @@
         z-index: 200;
     }   
 .index-site-title {
-    padding: 12.5vh 40vw 12.5vh 40vw;
+    padding: 12.5vh 40vw;
     position: fixed;
     font-family: "Fraunces", serif;
     font-weight: 80;
@@ -176,6 +176,10 @@ section {
             #mobile-header-content {
                 display: flex;
             }
+
+        .index-site-title {
+    top: 5vh;
+        }
 
             .index-nav-right {
                 display: none;
