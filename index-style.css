@@ -12,12 +12,23 @@
         display: none;
         justify-content: space-between;
         align-items: center;
-        padding: 0vh 16vw;
-        font-size: clamp(1.5vw, 2vw, 3vw);
-        top: 11vh;
-        position: fixed;
+        font-size: clamp(1vw, 2vw, 3vw);
         z-index: 200;
+        margin: -5vh 15vw;
+        position: fixed;
     }   
+
+    #mobile-header-title {
+        display: none;
+        text-align: center;
+        width: 100%;
+        margin: -10vh 0vw;
+    font-family: "Fraunces", serif;
+    font-weight: 80;
+    font-size: clamp(1.75rem, 2.5vw, 3rem);
+    position: fixed;
+    z-index: 200;
+    }
 .index-site-title {
     padding: 12.5vh 40vw;
     position: fixed;
@@ -168,7 +179,7 @@ section {
     width: 100%;
     }
 
-    @media (max-width: 768px) 
+    @media (max-width: 770px) 
                     /* use (hover: none) when im not testing on my laptop */    {
         .button:hover::after {
         opacity: 0;
@@ -176,11 +187,12 @@ section {
             #mobile-header-content {
                 display: flex;
             }
-
-        .index-site-title {
-    top: 5vh;
-        }
-
+            #mobile-header-title {
+                display: block;
+            }
+            #index-header-content {
+            display: none;
+            }   
             .index-nav-right {
                 display: none;
             }
