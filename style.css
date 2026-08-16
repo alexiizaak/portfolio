@@ -222,7 +222,7 @@
         .upcoming-dates {
             text-align: right;
             font-family: "Avenir", serif;
-            font-size: clamp(10px, 0.75vw, 10px);
+            font-size: clamp(0.5rem, 0.75vw, 1rem);
             word-spacing: 0.3vw;
             color: inherit;
             }
