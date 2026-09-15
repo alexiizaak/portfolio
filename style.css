@@ -89,7 +89,6 @@
         line-height: 3vh;
         word-spacing: 0.55vw;
         text-align: justify;
-        padding: 20vh 0vw 0vh 0vw;
         }   
 
     .right-side {
@@ -99,24 +98,18 @@
         margin-right: 15vw;
         max-width: 80%;        
         }
-#projects {
-    gap: 10px;
-    padding: 15vh 5vw 0vh 0vw;
-    margin: 0vh 5vw 0vh 45vw;
-    column-count: 2;
-    column-gap: 1vw;
-}
 
 .project-item {
     position: relative;
-    margin-bottom: 1vh;
+    margin-bottom: 2px;
+    break-inside: avoid;
     }
 
 .project-name {
   font-family: "Avenir", serif;
         font-weight: 70;
         font-style: normal;
-        font-size: clamp(0.5rem, 1vw, 3rem);
+        font-size: clamp(0.5rem, 1vw, 1.5rem);
         overflow-wrap: normal;
         color: lightgray;
         position: absolute;
@@ -126,6 +119,13 @@
         opacity: 0;
         z-index: 2;
         transition: opacity 1s ease;
+    }
+
+    .project-list {
+        padding: 15vh 0vw 0vh 0vw;
+        display: grid;
+        justify-content:left;
+        gap: 5vh 5vw;
     }
 
     .album-art:hover .project-name {
@@ -139,8 +139,7 @@
         grid: auto / auto auto;
         justify-content:left;
         gap: 5vh 5vw;
-
-}
+        }
 
     .album-art {
         display: block;
@@ -149,24 +148,25 @@
         overflow: hidden;
         }
         .album-art img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
+            display: block;
+            width: 100%;
+            height: auto;
+        }
 
-.album-art:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 1s ease;
-    z-index: 1;
-    pointer-events: none;
-}
+            .album-art:after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: opacity 1s ease;
+                z-index: 1;
+                pointer-events: none;
+            }
 
-.album-art:hover:after {
-    opacity: 1;}
+                .album-art:hover:after {
+                    opacity: 1;
+                }
          
         
     .album-title {
@@ -328,6 +328,11 @@
         opacity: 0;
     }
 
+    .project-list {
+        column-count: 1;
+        display: block;
+    }
+
     .album-art:hover .album-title,
     .album-art:hover .album-credits {
         opacity: 0;
@@ -338,8 +343,6 @@
     .album-art:hover .project-name {
         opacity: 0;
     }
-
-    #projects,
     .album-grid {
         column-count: 1;
         display: block;
