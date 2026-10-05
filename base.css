@@ -5,8 +5,17 @@
     }
 @font-face {
         font-family: "Avenir";
-        src: url("Resources/Fonts/avenir-lt-w01_35-light1475496.woff2") format("woff2");
+        src: url("Resources/Fonts/avenir.woff2") format("woff2");
         font-weight: 100;
+    }
+@font-face {
+        font-family: "Neuton";
+        src: url("Resources/Fonts/Neuton-Regular.woff2") format("woff2");
+        font-weight: 400;
+    }
+
+    var {
+        --red: #940025;
     }
     
 a{
@@ -62,7 +71,7 @@ a, .social {
     }
         .button {
             position: relative;
-                font-family: "Avenir", serif;
+                font-family: inherit;
                 font-optical-sizing: auto;
                 font-weight: inherit;
                 font-style: inherit;

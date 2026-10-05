@@ -1,141 +1,13 @@
-
-    #index-header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20vw;
-        font-size: clamp(0.5rem, 0.75vw, 1rem);
-
-    }
-
-    #mobile-header-content {
-        display: none;
-        justify-content: space-between;
-        align-items: center;
-        font-size: clamp(1vw, 2vw, 3vw);
-        z-index: 200;
-        margin: -5vh 15vw;
-        position: fixed;
-    }   
-
-    #mobile-header-title {
-        display: none;
-        text-align: center;
-        width: 100%;
-        margin: -10vh 0vw;
-    font-family: "Fraunces", serif;
-    font-weight: 80;
-    font-size: clamp(1.75rem, 2.5vw, 3rem);
-    position: fixed;
-    z-index: 200;
-    }
-.index-site-title {
-    padding: 12.5vh 40vw;
-    position: fixed;
-    font-family: "Fraunces", serif;
-    font-weight: 80;
-    font-size: clamp(2rem, 3vw, 4rem);
-    display: contents;
-    text-align: center;
-    z-index: 200;
-
-    }   
-        .index-site-title:hover {
-            color: black;
-            }  
-            a, .site-title {
-                transition: color 0.3s ease;
-                }
-
-.index-nav-left, .index-nav-right {
-    display: contents;
-    gap: clamp(2vw, 5vw, 10vw);
-    transition: opacity 0.4s ease;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    }
-
-    .mobile-header {
-    gap: clamp(3vw, 7vw, 10vw);
-    transition: opacity 0.4s ease;
-    }
-
-    .dropdown {
-        position: relative;
-        cursor: auto;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #940025;
-        height: 5vh;
-        width: 3vw;
-        z-index: 1;
-        padding: 1.5vh 1vw;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
-        font-family: "Avenir", serif;
-                font-optical-sizing: auto;
-                font-weight: 100;
-                font-style: normal;
-                font-size: 12px;  
-                color: white;  
-            margin: 0vh 0vw;
-            width: fit-content;
-            translate: -40px
-    }
-
-    .dropdown:hover ul.dropdown-content {
-        display: grid;
-        transition: ease-in;
-    }
-
-    .dropdown-item{
-    padding: 3px 6px;
-    cursor: pointer;
-    }
-
-    .dropdown-item::after {              
-                    content: "";
-                    position:absolute;
-                    left: 0;
-                    bottom: -5px;
-                    right: 0;
-                    width: 0%;
-                    background: white;
-                    transition: width 0.5s ease;
-                }
-                    
-                        a, .dropdown-item {
-                            transition: color 0.3s ease;
-                        }
-                        .dropdown-item:hover::after {
-                            width: 100%;
-                            height: 1px;
-                            
-                        }  
-
-    
-
-
     #Web-Banner{
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-        object-position: center center;
         display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         z-index: 1;
+        opacity: 1;
         }
-            video{
-                display: block;
-            }
-
         .hero {
-            margin-top: 15vh;
-            width: 100%;
-            height: 70vh;
+            margin-top: 0vh;
             max-height: 550px;
             overflow: hidden;
             position: relative;            }                                      
@@ -145,15 +17,50 @@
             /* SETTINGS TO DARKEN THE VIDEO, Formats Weird and gets in the way of the header
             content property stops the video being able to play entirely because its placing an invisible layer over the video*/
                 content: "";
-                position: relative;
-                width: 100%;
-                height: 100%;
                 inset: 0;
-                background: rgba(0, 0, 0, 0.25); 
+                background: rgba(0, 0, 0, 0.8); 
                 z-index: 2;
                 pointer-events: none;
-                margin-top: 2vh;
                 } 
+
+.index-site-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+
+
+    color: beige;
+    font-family: "Fraunces", serif;
+    font-weight: 80;
+    font-size: clamp(3rem, 5vw, 5rem);
+    text-align: center;
+    z-index: 2;
+    }   
+        .index-site-title:hover {
+            color: #940025;
+            }  
+            a, .site-title {
+                transition: color 0.3s ease;
+                }
+
+
+
+.index-header-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 3vh 0vw;
+    font-family: "Fraunces", serif;
+    font-weight: 30;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+    }
+
+
+
+    /* Gallery Settings 
         .row {
             display: block;
         }
@@ -175,30 +82,7 @@
             object-fit: scale-down;
             padding:0%;
         }          
-
+*/
 section {
     width: 100%;
-    }
-
-    @media (max-width: 770px) 
-                    /* use (hover: none) when im not testing on my laptop */    {
-        .button:hover::after {
-        opacity: 0;
-        }
-            #mobile-header-content {
-                display: flex;
-            }
-            #mobile-header-title {
-                display: block;
-            }
-            #index-header-content {
-            display: none;
-            }   
-            .index-nav-right {
-                display: none;
-            }
-            .index-nav-left {
-                display: none;
-            }
-
     }
