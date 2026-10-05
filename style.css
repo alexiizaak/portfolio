@@ -109,7 +109,7 @@
   font-family: "Avenir", serif;
         font-weight: 70;
         font-style: normal;
-        font-size: clamp(0.5rem, 1vw, 1.5rem);
+        font-size: clamp(0.5rem, 2vw, 1.5rem);
         overflow-wrap: normal;
         color: lightgray;
         position: absolute;
@@ -344,7 +344,7 @@
 
     .button:hover::after {
         opacity: 0;
-    }
+    } 
 
     .project-list {
         column-count: 1;
@@ -375,4 +375,3 @@
         padding: 5vh 0vw 0vh 0vw;
     }
 }
-        

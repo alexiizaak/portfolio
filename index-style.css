@@ -37,6 +37,7 @@
     font-size: clamp(2rem, 3vw, 4rem);
     display: contents;
     text-align: center;
+    z-index: 200;
 
     }   
         .index-site-title:hover {
@@ -62,7 +63,7 @@
 
     .dropdown {
         position: relative;
-        cursor: pointer;
+        cursor: auto;
     }
 
     .dropdown-content {
