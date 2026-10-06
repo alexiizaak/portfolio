@@ -10,7 +10,7 @@
         .other-site-title {
                 font-family: "Fraunces", serif;
                 font-weight: 100;
-                font-size: clamp(2rem, 3vw, 5rem);
+                font-size: clamp(2rem, 4.5vw, 5rem);
                 color: gray;
                 position: fixed;
                 margin: 0vh 25vw 20vh 25vw;
@@ -62,11 +62,11 @@
         font-optical-sizing: auto;
         font-weight: 100;
         font-style: normal;
-        font-size: clamp(1rem, 5vw, 10rem);
+        font-size: clamp(2rem, 5vw, 8rem);
         color: White;
         text-align: center;
             position: fixed;
-                padding: 35vh 8vw;
+                padding: 35vh 3vw;
                 z-index: 2;
             }
 
