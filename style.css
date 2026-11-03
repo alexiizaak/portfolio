@@ -4,8 +4,11 @@
         align-items: flex-start;
         justify-content: flex-start;
         }
-         
         
+:root {
+        --red: #940025;
+        --beige: #f9f2e5;
+    }
 
         .other-site-title {
                 font-family: "Fraunces", serif;
@@ -257,7 +260,7 @@
             font-family: "Fraunces", serif;
             font-size: clamp(0.75rem, 1vw, 1.5rem);
             font-style: bold;
-            color: #940025;
+            color: var(--red);
             }
 
         .previous-dates {
@@ -288,7 +291,7 @@
     display: block;
     width: 100%;
     height: 1px;
-    background: #940025;
+    background: var(--red);
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -323,7 +326,7 @@
         height: 20vh;
         width: 13vw;
         max-width: 300px;
-        background: #940025;
+        background: var (--red);
         display: flex;
         flex-direction: column;
         justify-content: center;

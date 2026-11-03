@@ -1,27 +1,33 @@
-    #Web-Banner{
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-        opacity: 1;
-        }
-        .hero {
-            margin-top: 0vh;
-            max-height: 550px;
-            overflow: hidden;
-            position: relative;            }                                      
-            
-            
-            .hero::after{                                            
-            /* SETTINGS TO DARKEN THE VIDEO, Formats Weird and gets in the way of the header
-            content property stops the video being able to play entirely because its placing an invisible layer over the video*/
-                content: "";
-                inset: 0;
-                background: rgba(0, 0, 0, 0.8); 
-                z-index: 2;
-                pointer-events: none;
-                } 
+#Web-Banner{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 1;
+}
+    .hero {
+        margin-top: 0vh;
+        max-height: 550px;
+        overflow: hidden;
+        position: relative;
+    }                                      
+        
+        
+        .hero::after{                                            
+        /* SETTINGS TO DARKEN THE VIDEO, Formats Weird and gets in the way of the header
+        content property stops the video being able to play entirely because its placing an invisible layer over the video*/
+            content: "";
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8); 
+            z-index: 2;
+            pointer-events: none;
+        } 
+        
+:root {
+        --red: #940025;
+        --beige: #f9f2e5;
+    }
 
 .index-site-title {
     position: absolute;
@@ -30,8 +36,7 @@
     width: 100%;
     margin: 0;
 
-
-    color: beige;
+    color: white;
     font-family: "Fraunces", serif;
     font-weight: 80;
     font-size: clamp(3rem, 5vw, 5rem);
@@ -39,7 +44,7 @@
     z-index: 2;
     }   
         .index-site-title:hover {
-            color: #940025;
+            color: var(--red);
             }  
             a, .site-title {
                 transition: color 0.3s ease;
@@ -63,16 +68,15 @@
     padding: 0px;
     font-size: clamp(0.75rem, 1.25vw, 2.5rem);
     transition: color 0.3s ease;
-    color: #940025;
-    
-    
-}
-.index-social:hover {
-    color: black;
-}
-a, .index-social {
-    transition: color 0.3s ease;
-}
+    color: var(--red);
+     }
+
+    .index-social:hover {
+        color: black;
+    }
+        a, .index-social {
+            transition: color 0.3s ease;
+        }   
 
     /* Gallery Settings 
         .row {
